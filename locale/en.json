@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Project MCP (.mcp.json)",
+    "description": "Read each project's .mcp.json and start its MCP servers as mcp__<server>__<tool> tools; serves several projects at once (tool names carry a project prefix) and remounts on change."
+  }
+}

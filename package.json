@@ -1,0 +1,24 @@
+{
+  "name": "@local/dsh-mcp-json",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Read projects' .mcp.json files and start their MCP servers inside the Harness.",
+  "scripts": {
+    "test": "node test/regress.mjs"
+  },
+  "meta": {
+    "title": "项目 MCP（.mcp.json）",
+    "description": "读取项目根目录的 .mcp.json，把声明的 MCP server 挂载为 mcp__<server>__<tool> 工具；支持同时服务多个项目（工具名带项目前缀），文件变更即热重挂。"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

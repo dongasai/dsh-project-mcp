@@ -1,0 +1,38 @@
+# 项目级 MCP：把各项目根目录 `.mcp.json` 里声明的 server 挂进当前 profile。
+#
+# 装好本 bundle 之后，MCP server 清单由项目自己的 `.mcp.json` 拥有；
+# 改 `.mcp.json` 即热重挂，不需要再往 profile 的 cordis.patch.yml 里加行。
+#
+# ⚠ 下面的 projects 是**本机部署的默认值**，不是插件的一部分：本插件是通用工具，
+#   换机器或换项目集合时改这里；也可以在 profile 的 cordis.patch.yml 里按 id 覆盖
+#   （注意 Cordis 的 config 是整体替换而非深合并，覆盖时要把字段写全）：
+#     - id: mcp-json
+#       config:
+#         projects: [...]
+#         path: .mcp.json
+#         watch: true
+#         failOnStartupError: false
+#
+# 多项目下工具名会带「项目前缀」（namespace: auto 的默认行为）：dsh-mcp-client 的
+# serverName 是进程级独占的，不加前缀则同名 server 互相顶掉。前缀取目录名，也可用
+# 每项的 prefix 显式指定：
+#   mcp__lamei_dbhub__execute_sql
+#   mcp__project_mcp_demo_echo__echo
+# 只服务单个项目时删掉 scanRoot 那段，工具名会退回 mcp__dbhub__execute_sql。
+- insert:
+    - id: mcp-json
+      name: '@local/dsh-mcp-json'
+      config:
+        projects:
+          # 业务项目：stdio 的默认 cwd 就是这里，dbhub 靠它读到项目 .env
+          - dir: /data/project/shop/lamei_shop
+            prefix: lamei
+          # 多项目验证靶子：/data/ai/dsh 下的 project_mcp_demo{,1,2}
+          # 验证完删掉这两行即可，不影响业务项目
+          - scanRoot: /data/ai/dsh
+            depth: 1
+        path: .mcp.json
+        # 监视各项目的 .mcp.json：变更后先停旧实例、再起新实例
+        watch: true
+        # 单个 server 起不来只告警，不拖垮同一份 .mcp.json 里的其它 server
+        failOnStartupError: false
