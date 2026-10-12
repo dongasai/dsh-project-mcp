@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "项目 MCP（.mcp.json）",
-    "description": "读取项目根目录的 .mcp.json，把声明的 MCP server 挂载为 mcp__<server>__<tool> 工具；支持同时服务多个项目（工具名带项目前缀），文件变更即热重挂。"
+    "description": "读取当前会话所在项目的 .mcp.json，把声明的 MCP server 挂到该会话作用域 —— 项目之间互相不可见（真隔离），文件变更即热重挂。"
   }
 }

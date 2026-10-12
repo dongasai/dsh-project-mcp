@@ -1,6 +1,6 @@
 {
   "meta": {
     "title": "Project MCP (.mcp.json)",
-    "description": "Read each project's .mcp.json and start its MCP servers as mcp__<server>__<tool> tools; serves several projects at once (tool names carry a project prefix) and remounts on change."
+    "description": "Read the current session's project .mcp.json and mount its MCP servers into that session's scope — projects are mutually invisible (true isolation), remounting on change."
   }
 }
