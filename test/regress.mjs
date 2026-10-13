@@ -1,5 +1,5 @@
 /**
- * @module @local/dsh-mcp-json/test/regress
+ * @module @dongasai/dsh-project-mcp/test/regress
  *
  * 回归测试：用 stub profile ctx + stub 会话（agent）驱动本插件，覆盖配置归一化、
  * 会话级隔离、项目定位、错误路径、热重挂与超时兜底。

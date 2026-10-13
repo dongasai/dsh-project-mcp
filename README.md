@@ -1,4 +1,4 @@
-# @local/dsh-mcp-json
+# @dongasai/dsh-project-mcp
 
 把**项目自己声明的 MCP**（`.mcp.json`）搬进 DSH：读取**当前会话所在项目**的 `.mcp.json`，
 按其中的 `mcpServers` 逐个挂载官方 `@deepseek-ai/dsh-mcp-client`，于是这些 server 的工具
@@ -77,7 +77,7 @@ dsh plugin --profile web add link:/data/ai/dsh/dsh_project_mcp
 
 #### 装完确认
 
-`Config.listConfigs`（`name: "@local/dsh-mcp-json"`）里能看到行，即已生效；再新开一个会话
+`Config.listConfigs`（`name: "@dongasai/dsh-project-mcp"`）里能看到行，即已生效；再新开一个会话
 （或重启 Harness）让插件加载，然后按第 3 步验证工具。
 
 ### 2. 项目根写 .mcp.json

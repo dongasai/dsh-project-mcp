@@ -11,7 +11,7 @@
 # 代价：一个会话一份实例 —— N 个会话同时开着就是 N 份 MCP 子进程，官方设计如此。
 - insert:
     - id: mcp-json
-      name: '@local/dsh-mcp-json'
+      name: '@dongasai/dsh-project-mcp'
       config:
         path: .mcp.json
         # 从会话工作目录向上找（这是默认值，写出来是为了醒目）

@@ -1,5 +1,5 @@
 /**
- * @module @local/dsh-mcp-json/test/fixtures/mcp-http-server
+ * @module @dongasai/dsh-project-mcp/test/fixtures/mcp-http-server
  *
  * 极简 **streamable-http** MCP 服务端夹具：用来补上本插件 `.mcp.json` 里
  * `type: "http"` 这条传输的端到端验证空白（仓库里 dbhub 走的是 stdio）。

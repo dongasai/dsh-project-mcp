@@ -1,5 +1,5 @@
 /**
- * @module @local/dsh-mcp-json
+ * @module @dongasai/dsh-project-mcp
  *
  * **项目级** MCP 启动器：读取**当前会话所在项目**根目录的 `.mcp.json`
  * （Claude Code / Qoder / VS Code 等通用的 MCP server 声明格式），把其中每个 server

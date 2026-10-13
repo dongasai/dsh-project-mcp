@@ -1,5 +1,5 @@
 {
-  "name": "@local/dsh-mcp-json",
+  "name": "@dongasai/dsh-project-mcp",
   "version": "2.0.0",
   "private": true,
   "type": "module",

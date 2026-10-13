@@ -1,5 +1,5 @@
 /**
- * @module @local/dsh-mcp-json/test/fixtures/mcp-stdio-server
+ * @module @dongasai/dsh-project-mcp/test/fixtures/mcp-stdio-server
  *
  * 极简 stdio MCP 服务端夹具：用来在**真链**上验证本插件能把 `.mcp.json` 里任意一个
  * stdio server 挂起来（而不是只有 dbhub 能跑）。

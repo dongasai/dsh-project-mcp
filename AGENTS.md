@@ -6,7 +6,7 @@
 
 ## 项目是什么
 
-`@local/dsh-mcp-json` —— DSH 插件：读取**当前会话所在项目**的 `.mcp.json`（Claude Code 风格的
+`@dongasai/dsh-project-mcp` —— DSH 插件：读取**当前会话所在项目**的 `.mcp.json`（Claude Code 风格的
 `mcpServers` 声明），把每个 server 挂成一份官方 `@deepseek-ai/dsh-mcp-client` 实例，于是工具以
 `mcp__<serverName>__<tool>` 出现在该会话里。
 
